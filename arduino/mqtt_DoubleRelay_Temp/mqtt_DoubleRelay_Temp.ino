@@ -16,7 +16,7 @@
 #include <PubSubClient.h>
 #include <DallasTemperature.h>
 //#include <EEPROM.h>
-#include "secrets.h"
+#include "mysecrets.h"
 #include "config.h"
 #include "ardprintf.h"
 
@@ -29,8 +29,8 @@ int relay1Status = 0;
 int relay2Status = 0;
 
 //switch related variables
-int switch1LastReading = LOW;
-int switch2LastReading = LOW;
+int switch1LastReading = HIGH;
+int switch2LastReading = HIGH;
 long lastSwitchTime = 0;
 long switchDebounce = 200;
 
@@ -196,7 +196,8 @@ void verifyAndSendTemp() {
 void checkSwitches() {
   //read and process switch 1
   int switch1Reading = digitalRead(SWITCH_1_PIN);
-    if(switch1Reading == HIGH && switch1LastReading == LOW && millis() - lastSwitchTime > switchDebounce){
+    if(switch1Reading == LOW && switch1LastReading == HIGH && millis() - lastSwitchTime > switchDebounce){
+      Serial.println("Switching relay1 by connected switch");
       if(relay1Status == 1){
         switchRelay(RELAY_1_PIN, LOW);
       } else {
@@ -208,7 +209,8 @@ void checkSwitches() {
 
   //read and process switch 2
   int switch2Reading = digitalRead(SWITCH_2_PIN);
-    if(switch2Reading == HIGH && switch2LastReading == LOW && millis() - lastSwitchTime > switchDebounce){
+    if(switch2Reading == LOW && switch2LastReading == HIGH && millis() - lastSwitchTime > switchDebounce){
+      Serial.println("Switching relay2 by connected switch");
       if(relay2Status == 1){
         switchRelay(RELAY_2_PIN, LOW);
       } else {
