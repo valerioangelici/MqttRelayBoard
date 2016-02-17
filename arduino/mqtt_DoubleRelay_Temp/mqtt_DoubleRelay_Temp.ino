@@ -197,26 +197,36 @@ void checkSwitches() {
   //read and process switch 1
   int switch1Reading = digitalRead(SWITCH_1_PIN);
     if(switch1Reading == LOW && switch1LastReading == HIGH && millis() - lastSwitchTime > switchDebounce){
-      Serial.println("Switching relay1 by connected switch");
-      if(relay1Status == 1){
-        switchRelay(RELAY_1_PIN, LOW);
-      } else {
-        switchRelay(RELAY_1_PIN, HIGH);
-      }
-      lastSwitchTime = millis();
+      //testing the button again in 50 msec to try to avoid noise
+      delay(50);
+      switch1Reading = digitalRead(SWITCH_1_PIN);
+      if(switch1Reading == LOW){
+        Serial.println("Switching relay1 by connected switch");
+        if(relay1Status == 1){
+          switchRelay(RELAY_1_PIN, LOW);
+        } else {
+          switchRelay(RELAY_1_PIN, HIGH);
+        }
+        lastSwitchTime = millis();
+      } 
     }
   switch1LastReading = switch1Reading;
 
   //read and process switch 2
   int switch2Reading = digitalRead(SWITCH_2_PIN);
     if(switch2Reading == LOW && switch2LastReading == HIGH && millis() - lastSwitchTime > switchDebounce){
-      Serial.println("Switching relay2 by connected switch");
-      if(relay2Status == 1){
-        switchRelay(RELAY_2_PIN, LOW);
-      } else {
-        switchRelay(RELAY_2_PIN, HIGH);
-      }
-      lastSwitchTime = millis();
+      //testing the button again in 50 msec to try to avoid noise
+      delay(50);
+      switch2Reading = digitalRead(SWITCH_1_PIN);
+      if(switch2Reading == LOW){
+        Serial.println("Switching relay2 by connected switch");
+        if(relay2Status == 1){
+          switchRelay(RELAY_2_PIN, LOW);
+        } else {
+          switchRelay(RELAY_2_PIN, HIGH);
+        }
+        lastSwitchTime = millis();
+      } 
     }
   switch2LastReading = switch2Reading;
 }

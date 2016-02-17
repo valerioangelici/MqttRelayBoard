@@ -138,96 +138,6 @@
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
-<library name="ESP8266-ESP12">
-<packages>
-<package name="ESP8266-ESP12">
-<wire x1="0" y1="0" x2="16.2" y2="0" width="0.127" layer="21"/>
-<wire x1="16.2" y1="0" x2="16.2" y2="24.1" width="0.127" layer="21"/>
-<wire x1="16.2" y1="24.1" x2="0" y2="24.1" width="0.127" layer="21"/>
-<wire x1="0" y1="24.1" x2="0" y2="0" width="0.127" layer="21"/>
-<smd name="16" x="0" y="2" dx="2" dy="1.2" layer="1"/>
-<smd name="15" x="0" y="4" dx="2" dy="1.2" layer="1"/>
-<smd name="14" x="0" y="6" dx="2" dy="1.2" layer="1"/>
-<smd name="13" x="0" y="8" dx="2" dy="1.2" layer="1"/>
-<smd name="12" x="0" y="10" dx="2" dy="1.2" layer="1"/>
-<smd name="11" x="0" y="12" dx="2" dy="1.2" layer="1"/>
-<smd name="10" x="0" y="14" dx="2" dy="1.2" layer="1"/>
-<smd name="9" x="0" y="16" dx="2" dy="1.2" layer="1"/>
-<smd name="1" x="16.2" y="2" dx="2" dy="1.2" layer="1"/>
-<smd name="2" x="16.2" y="4" dx="2" dy="1.2" layer="1"/>
-<smd name="3" x="16.2" y="6" dx="2" dy="1.2" layer="1"/>
-<smd name="4" x="16.2" y="8" dx="2" dy="1.2" layer="1"/>
-<smd name="5" x="16.2" y="10" dx="2" dy="1.2" layer="1"/>
-<smd name="6" x="16.2" y="12" dx="2" dy="1.2" layer="1"/>
-<smd name="7" x="16.2" y="14" dx="2" dy="1.2" layer="1"/>
-<smd name="8" x="16.2" y="16" dx="2" dy="1.2" layer="1"/>
-<text x="5" y="2" size="1.27" layer="21" rot="R90">&gt;NAME</text>
-<text x="3.73" y="14.92" size="1.27" layer="21">ESP-07/12</text>
-</package>
-</packages>
-<symbols>
-<symbol name="ESP12">
-<pin name="GND" x="7.62" y="-10.16" length="middle" rot="R180"/>
-<pin name="GPIO15" x="7.62" y="-7.62" length="middle" rot="R180"/>
-<pin name="GPIO2" x="7.62" y="-5.08" length="middle" rot="R180"/>
-<pin name="GPIO0" x="7.62" y="-2.54" length="middle" rot="R180"/>
-<pin name="GPIO5" x="7.62" y="0" length="middle" rot="R180"/>
-<pin name="GPIO4" x="7.62" y="2.54" length="middle" rot="R180"/>
-<pin name="RXD" x="7.62" y="5.08" length="middle" rot="R180"/>
-<pin name="TXD" x="7.62" y="7.62" length="middle" rot="R180"/>
-<pin name="REST" x="-22.86" y="7.62" length="middle"/>
-<pin name="ADC" x="-22.86" y="5.08" length="middle"/>
-<pin name="CH_PD" x="-22.86" y="2.54" length="middle"/>
-<pin name="GPIO16" x="-22.86" y="0" length="middle"/>
-<pin name="GPIO14" x="-22.86" y="-2.54" length="middle"/>
-<pin name="GPIO12" x="-22.86" y="-5.08" length="middle"/>
-<pin name="GPIO13" x="-22.86" y="-7.62" length="middle"/>
-<pin name="VCC" x="-22.86" y="-10.16" length="middle"/>
-<wire x1="-17.78" y1="-12.7" x2="2.54" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-12.7" x2="2.54" y2="10.16" width="0.254" layer="94"/>
-<wire x1="2.54" y1="10.16" x2="-17.78" y2="10.16" width="0.254" layer="94"/>
-<wire x1="-17.78" y1="10.16" x2="-17.78" y2="-12.7" width="0.254" layer="94"/>
-<text x="-17.78" y="-17.78" size="1.27" layer="94">ESP8266_ESP-12</text>
-<text x="-17.78" y="-15.24" size="1.27" layer="94">&gt;NAME</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="ESP8266_ESP-12">
-<description>ESP8266 ESP-12
-
-
-Discussion about pins here: http://www.esp8266.com/viewtopic.php?f=13&amp;t=1429</description>
-<gates>
-<gate name="G$1" symbol="ESP12" x="5.08" y="0"/>
-</gates>
-<devices>
-<device name="" package="ESP8266-ESP12">
-<connects>
-<connect gate="G$1" pin="ADC" pad="10"/>
-<connect gate="G$1" pin="CH_PD" pad="11"/>
-<connect gate="G$1" pin="GND" pad="1"/>
-<connect gate="G$1" pin="GPIO0" pad="4"/>
-<connect gate="G$1" pin="GPIO12" pad="14"/>
-<connect gate="G$1" pin="GPIO13" pad="15"/>
-<connect gate="G$1" pin="GPIO14" pad="13"/>
-<connect gate="G$1" pin="GPIO15" pad="2"/>
-<connect gate="G$1" pin="GPIO16" pad="12"/>
-<connect gate="G$1" pin="GPIO2" pad="3"/>
-<connect gate="G$1" pin="GPIO4" pad="6"/>
-<connect gate="G$1" pin="GPIO5" pad="5"/>
-<connect gate="G$1" pin="REST" pad="9"/>
-<connect gate="G$1" pin="RXD" pad="7"/>
-<connect gate="G$1" pin="TXD" pad="8"/>
-<connect gate="G$1" pin="VCC" pad="16"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="resistor">
 <description>&lt;b&gt;Resistors, Capacitors, Inductors&lt;/b&gt;&lt;p&gt;
 Based on the previous libraries:
@@ -4798,6 +4708,144 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 </deviceset>
 </devicesets>
 </library>
+<library name="ESP8266-ESP12E">
+<packages>
+<package name="ESP8266-ESP12E">
+<description>
+&lt;b&gt;ESP8266-12E with additional I/O and GPIO04/05 corrected&lt;/b&gt;&lt;p&gt;
+The author cannot warrant that this library is free from error
+or will meet your specific requirements.&lt;p&gt;
+&lt;author&gt;Created by PuceBaboon.com. Komagane, Nagano, JAPAN&lt;/author&gt;
+</description>
+<wire x1="16.2" y1="0" x2="16.2" y2="24.1" width="0.127" layer="21"/>
+<wire x1="16.2" y1="24.1" x2="0" y2="24.1" width="0.127" layer="21"/>
+<wire x1="0" y1="24.1" x2="0" y2="0" width="0.127" layer="21"/>
+<smd name="8" x="0" y="2" dx="2" dy="1.2" layer="1"/>
+<smd name="7" x="0" y="4" dx="2" dy="1.2" layer="1"/>
+<smd name="6" x="0" y="6" dx="2" dy="1.2" layer="1"/>
+<smd name="5" x="0" y="8" dx="2" dy="1.2" layer="1"/>
+<smd name="4" x="0" y="10" dx="2" dy="1.2" layer="1"/>
+<smd name="3" x="0" y="12" dx="2" dy="1.2" layer="1"/>
+<smd name="2" x="0" y="14" dx="2" dy="1.2" layer="1"/>
+<smd name="1" x="0" y="16" dx="2" dy="1.2" layer="1"/>
+<smd name="9" x="16.2" y="2" dx="2" dy="1.2" layer="1"/>
+<smd name="10" x="16.2" y="4" dx="2" dy="1.2" layer="1"/>
+<smd name="11" x="16.2" y="6" dx="2" dy="1.2" layer="1"/>
+<smd name="12" x="16.2" y="8" dx="2" dy="1.2" layer="1"/>
+<smd name="13" x="16.2" y="10" dx="2" dy="1.2" layer="1"/>
+<smd name="14" x="16.2" y="12" dx="2" dy="1.2" layer="1"/>
+<smd name="15" x="16.2" y="14" dx="2" dy="1.2" layer="1"/>
+<smd name="16" x="16.2" y="16" dx="2" dy="1.2" layer="1"/>
+<text x="5" y="2" size="1.27" layer="21" rot="R90">&gt;NAME</text>
+<text x="5" y="11.11" size="1.27" layer="21">ESP-12E</text>
+<wire x1="2.54" y1="16.51" x2="2.54" y2="17.78" width="0.127" layer="51"/>
+<wire x1="2.54" y1="17.78" x2="2.54" y2="22.86" width="0.127" layer="51"/>
+<wire x1="2.54" y1="22.86" x2="3.81" y2="22.86" width="0.127" layer="51"/>
+<wire x1="3.81" y1="22.86" x2="3.81" y2="19.05" width="0.127" layer="51"/>
+<wire x1="3.81" y1="19.05" x2="5.08" y2="19.05" width="0.127" layer="51"/>
+<wire x1="5.08" y1="19.05" x2="5.08" y2="22.86" width="0.127" layer="51"/>
+<wire x1="5.08" y1="22.86" x2="6.35" y2="22.86" width="0.127" layer="51"/>
+<wire x1="6.35" y1="22.86" x2="6.35" y2="19.05" width="0.127" layer="51"/>
+<wire x1="6.35" y1="19.05" x2="7.62" y2="19.05" width="0.127" layer="51"/>
+<wire x1="7.62" y1="19.05" x2="7.62" y2="22.86" width="0.127" layer="51"/>
+<wire x1="7.62" y1="22.86" x2="8.89" y2="22.86" width="0.127" layer="51"/>
+<wire x1="8.89" y1="22.86" x2="8.89" y2="19.05" width="0.127" layer="51"/>
+<wire x1="8.89" y1="19.05" x2="10.16" y2="19.05" width="0.127" layer="51"/>
+<wire x1="10.16" y1="19.05" x2="10.16" y2="22.86" width="0.127" layer="51"/>
+<wire x1="10.16" y1="22.86" x2="13.97" y2="22.86" width="0.127" layer="51"/>
+<wire x1="2.54" y1="17.78" x2="10.16" y2="17.78" width="0.127" layer="51"/>
+<smd name="17" x="11" y="0" dx="2" dy="1.2" layer="1" rot="R90"/>
+<smd name="18" x="3" y="0" dx="2" dy="1.2" layer="1" rot="R90"/>
+<smd name="19" x="5" y="0" dx="2" dy="1.2" layer="1" rot="R90"/>
+<wire x1="0" y1="0" x2="16.2" y2="0" width="0.127" layer="21"/>
+<smd name="20" x="13" y="0" dx="2" dy="1.2" layer="1" rot="R90"/>
+<smd name="21" x="7" y="0" dx="2" dy="1.2" layer="1" rot="R90"/>
+<smd name="22" x="9" y="0" dx="2" dy="1.2" layer="1" rot="R90"/>
+</package>
+</packages>
+<symbols>
+<symbol name="ESP12E">
+<description>
+&lt;b&gt;ESP8266-12E with additional I/O and GPIO04/05 corrected&lt;/b&gt;&lt;p&gt;
+The author cannot warrant that this library is free from error
+or will meet your specific requirements.&lt;p&gt;
+&lt;author&gt;Created by PuceBaboon.com. Komagane, Nagano, JAPAN&lt;/author&gt;
+</description>
+<pin name="GND" x="10.16" y="-10.16" length="middle" rot="R180"/>
+<pin name="GPIO15" x="10.16" y="-7.62" length="middle" rot="R180"/>
+<pin name="GPIO2" x="10.16" y="-5.08" length="middle" rot="R180"/>
+<pin name="GPIO0" x="10.16" y="-2.54" length="middle" rot="R180"/>
+<pin name="GPIO4" x="10.16" y="0" length="middle" rot="R180"/>
+<pin name="GPIO5" x="10.16" y="2.54" length="middle" rot="R180"/>
+<pin name="RXD" x="10.16" y="5.08" length="middle" rot="R180"/>
+<pin name="TXD" x="10.16" y="7.62" length="middle" rot="R180"/>
+<pin name="REST" x="-22.86" y="7.62" length="middle"/>
+<pin name="ADC" x="-22.86" y="5.08" length="middle"/>
+<pin name="CH_PD" x="-22.86" y="2.54" length="middle"/>
+<pin name="GPIO16" x="-22.86" y="0" length="middle"/>
+<pin name="GPIO14" x="-22.86" y="-2.54" length="middle"/>
+<pin name="GPIO12" x="-22.86" y="-5.08" length="middle"/>
+<pin name="GPIO13" x="-22.86" y="-7.62" length="middle"/>
+<pin name="VCC" x="-22.86" y="-10.16" length="middle"/>
+<wire x1="-17.78" y1="-20.32" x2="5.08" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-20.32" x2="5.08" y2="15.24" width="0.254" layer="94"/>
+<wire x1="5.08" y1="15.24" x2="-17.78" y2="15.24" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="15.24" x2="-17.78" y2="-20.32" width="0.254" layer="94"/>
+<text x="-15.24" y="10.16" size="1.27" layer="94">ESP8266_ESP12E</text>
+<text x="-10.16" y="12.7" size="1.27" layer="94">&gt;NAME</text>
+<pin name="CS0" x="-12.7" y="-25.4" length="middle" rot="R90"/>
+<pin name="MISO" x="-10.16" y="-25.4" length="middle" rot="R90"/>
+<pin name="GPIO9" x="-7.62" y="-25.4" length="middle" rot="R90"/>
+<pin name="GPIO10" x="-5.08" y="-25.4" length="middle" rot="R90"/>
+<pin name="MOSI" x="-2.54" y="-25.4" length="middle" rot="R90"/>
+<pin name="SCLK" x="0" y="-25.4" length="middle" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ESP8266-12E" prefix="MDL" uservalue="yes">
+<description>
+&lt;b&gt;ESP8266-12E with additional I/O and GPIO04/05 corrected&lt;/b&gt;&lt;p&gt;
+The author cannot warrant that this library is free from error
+or will meet your specific requirements.&lt;p&gt;
+&lt;author&gt;Created by PuceBaboon.com. Komagane, Nagano, JAPAN&lt;/author&gt;
+</description>
+<gates>
+<gate name="G$1" symbol="ESP12E" x="5.08" y="0"/>
+</gates>
+<devices>
+<device name="ESP8266-ESP12E" package="ESP8266-ESP12E">
+<connects>
+<connect gate="G$1" pin="ADC" pad="2"/>
+<connect gate="G$1" pin="CH_PD" pad="3"/>
+<connect gate="G$1" pin="CS0" pad="17"/>
+<connect gate="G$1" pin="GND" pad="9"/>
+<connect gate="G$1" pin="GPIO0" pad="12"/>
+<connect gate="G$1" pin="GPIO10" pad="20"/>
+<connect gate="G$1" pin="GPIO12" pad="6"/>
+<connect gate="G$1" pin="GPIO13" pad="7"/>
+<connect gate="G$1" pin="GPIO14" pad="5"/>
+<connect gate="G$1" pin="GPIO15" pad="10"/>
+<connect gate="G$1" pin="GPIO16" pad="4"/>
+<connect gate="G$1" pin="GPIO2" pad="11"/>
+<connect gate="G$1" pin="GPIO4" pad="13"/>
+<connect gate="G$1" pin="GPIO5" pad="14"/>
+<connect gate="G$1" pin="GPIO9" pad="19"/>
+<connect gate="G$1" pin="MISO" pad="18"/>
+<connect gate="G$1" pin="MOSI" pad="21"/>
+<connect gate="G$1" pin="REST" pad="1"/>
+<connect gate="G$1" pin="RXD" pad="15"/>
+<connect gate="G$1" pin="SCLK" pad="22"/>
+<connect gate="G$1" pin="TXD" pad="16"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4812,7 +4860,6 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 </class>
 </classes>
 <parts>
-<part name="U$1" library="ESP8266-ESP12" deviceset="ESP8266_ESP-12" device=""/>
 <part name="R1" library="resistor" deviceset="R-EU_" device="R0805" value="10K"/>
 <part name="R2" library="resistor" deviceset="R-EU_" device="R0805" value="10K"/>
 <part name="K1" library="relay" deviceset="AQG*" device="" technology="12105"/>
@@ -4836,6 +4883,7 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <part name="Q2" library="semicon-smd-ipc" deviceset="NPN-TRANSISTOR_" device="SOT23"/>
 <part name="D1" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SMA"/>
 <part name="D2" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SMA"/>
+<part name="MDL1" library="ESP8266-ESP12E" deviceset="ESP8266-12E" device="ESP8266-ESP12E"/>
 </parts>
 <sheets>
 <sheet>
@@ -4845,15 +4893,14 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <text x="96.52" y="104.14" size="1.778" layer="91">Serial Header</text>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="53.34" y="60.96"/>
 <instance part="R1" gate="G$1" x="142.24" y="96.52"/>
-<instance part="R2" gate="G$1" x="22.86" y="63.5"/>
+<instance part="R2" gate="G$1" x="-58.42" y="53.34"/>
 <instance part="K1" gate="A" x="111.76" y="38.1" rot="R270"/>
 <instance part="R3" gate="G$1" x="121.92" y="63.5" rot="R180"/>
 <instance part="U$4" gate="G$1" x="30.48" y="25.4"/>
 <instance part="JP1" gate="A" x="132.08" y="93.98" rot="R180"/>
 <instance part="R4" gate="G$1" x="142.24" y="91.44"/>
-<instance part="R5" gate="G$1" x="22.86" y="68.58"/>
+<instance part="R5" gate="G$1" x="-58.42" y="58.42"/>
 <instance part="JP2" gate="A" x="73.66" y="101.6" rot="R180"/>
 <instance part="K2" gate="A" x="154.94" y="38.1" rot="R270"/>
 <instance part="R6" gate="G$1" x="162.56" y="60.96" rot="R180"/>
@@ -4865,13 +4912,14 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <instance part="AC-IN" gate="-2" x="15.24" y="25.4"/>
 <instance part="C1" gate="G$1" x="38.1" y="7.62"/>
 <instance part="C2" gate="G$1" x="66.04" y="7.62"/>
-<instance part="CONN-SW" gate="-1" x="109.22" y="12.7" rot="R90"/>
-<instance part="CONN-SW" gate="-2" x="114.3" y="12.7" rot="R90"/>
-<instance part="CONN-SW" gate="-3" x="157.48" y="12.7" rot="R90"/>
+<instance part="CONN-SW" gate="-1" x="114.3" y="12.7" rot="R90"/>
+<instance part="CONN-SW" gate="-2" x="157.48" y="12.7" rot="R90"/>
+<instance part="CONN-SW" gate="-3" x="109.22" y="12.7" rot="R90"/>
 <instance part="Q1" gate="G$1" x="111.76" y="63.5" rot="R180"/>
 <instance part="Q2" gate="G$1" x="154.94" y="60.96" rot="R180"/>
 <instance part="D1" gate="G$1" x="111.76" y="50.8"/>
 <instance part="D2" gate="G$1" x="154.94" y="50.8"/>
+<instance part="MDL1" gate="G$1" x="-27.94" y="50.8"/>
 </instances>
 <busses>
 </busses>
@@ -4879,13 +4927,12 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <net name="3V3" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
-<label x="12.7" y="63.5" size="1.778" layer="95"/>
+<label x="-71.12" y="53.34" size="1.778" layer="95"/>
 <pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="17.78" y1="63.5" x2="12.7" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="63.5" x2="17.78" y2="68.58" width="0.1524" layer="91"/>
-<label x="12.7" y="68.58" size="1.778" layer="95"/>
+<wire x1="-63.5" y1="53.34" x2="-71.12" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="53.34" x2="-63.5" y2="58.42" width="0.1524" layer="91"/>
 <label x="12.7" y="96.52" size="1.778" layer="95"/>
-<junction x="17.78" y="63.5"/>
+<junction x="-63.5" y="53.34"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
@@ -4899,11 +4946,6 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <pinref part="C2" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="VCC"/>
-<wire x1="30.48" y1="50.8" x2="12.7" y2="50.8" width="0.1524" layer="91"/>
-<label x="12.7" y="50.8" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="12.7" y1="96.52" x2="10.16" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="R7" gate="G$1" pin="2"/>
 </segment>
@@ -4913,37 +4955,12 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <pinref part="R8" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="K1" gate="A" pin="A"/>
-<pinref part="D1" gate="G$1" pin="C"/>
-<wire x1="114.3" y1="48.26" x2="114.3" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="50.8" x2="114.3" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="55.88" x2="124.46" y2="55.88" width="0.1524" layer="91"/>
-<junction x="114.3" y="50.8"/>
-<label x="129.54" y="55.88" size="1.778" layer="95" rot="R180"/>
-</segment>
-<segment>
-<pinref part="K2" gate="A" pin="A"/>
-<pinref part="D2" gate="G$1" pin="C"/>
-<wire x1="157.48" y1="48.26" x2="157.48" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="50.8" x2="157.48" y2="55.88" width="0.1524" layer="91"/>
-<junction x="157.48" y="50.8"/>
-<wire x1="157.48" y1="55.88" x2="167.64" y2="55.88" width="0.1524" layer="91"/>
-<label x="172.72" y="55.88" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="CH_PD" class="0">
-<segment>
-<pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="U$1" gate="G$1" pin="CH_PD"/>
-<wire x1="27.94" y1="63.5" x2="30.48" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="MDL1" gate="G$1" pin="VCC"/>
+<wire x1="-50.8" y1="40.64" x2="-53.34" y2="40.64" width="0.1524" layer="91"/>
+<label x="-55.88" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="GND"/>
-<wire x1="60.96" y1="50.8" x2="63.5" y2="50.8" width="0.1524" layer="91"/>
-<label x="63.5" y="50.8" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="-VO"/>
 <wire x1="63.5" y1="30.48" x2="71.12" y2="30.48" width="0.1524" layer="91"/>
@@ -4983,12 +5000,10 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <wire x1="152.4" y1="66.04" x2="152.4" y2="68.58" width="0.1524" layer="91"/>
 <label x="152.4" y="68.58" size="1.778" layer="95" rot="R180"/>
 </segment>
-</net>
-<net name="GPIO2" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO2"/>
-<wire x1="60.96" y1="55.88" x2="63.5" y2="55.88" width="0.1524" layer="91"/>
-<label x="63.5" y="55.88" size="1.778" layer="95"/>
+<pinref part="MDL1" gate="G$1" pin="GND"/>
+<wire x1="-17.78" y1="40.64" x2="-15.24" y2="40.64" width="0.1524" layer="91"/>
+<label x="-15.24" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -5003,13 +5018,23 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <pinref part="U2" gate="G$1" pin="IN"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 </segment>
-</net>
-<net name="LOAD1" class="1">
 <segment>
-<pinref part="K1" gate="A" pin="DS1"/>
-<wire x1="114.3" y1="27.94" x2="114.3" y2="17.78" width="0.1524" layer="91"/>
-<label x="114.3" y="20.32" size="1.778" layer="95" rot="R90"/>
-<pinref part="CONN-SW" gate="-2" pin="KL"/>
+<pinref part="K1" gate="A" pin="A"/>
+<pinref part="D1" gate="G$1" pin="C"/>
+<wire x1="114.3" y1="48.26" x2="114.3" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="50.8" x2="114.3" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="55.88" x2="124.46" y2="55.88" width="0.1524" layer="91"/>
+<junction x="114.3" y="50.8"/>
+<label x="129.54" y="55.88" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="K2" gate="A" pin="A"/>
+<pinref part="D2" gate="G$1" pin="C"/>
+<wire x1="157.48" y1="48.26" x2="157.48" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="50.8" x2="157.48" y2="55.88" width="0.1524" layer="91"/>
+<junction x="157.48" y="50.8"/>
+<wire x1="157.48" y1="55.88" x2="167.64" y2="55.88" width="0.1524" layer="91"/>
+<label x="172.72" y="55.88" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="GPIO0" class="0">
@@ -5019,9 +5044,9 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <pinref part="JP1" gate="A" pin="2"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO0"/>
-<wire x1="60.96" y1="58.42" x2="63.5" y2="58.42" width="0.1524" layer="91"/>
-<label x="63.5" y="58.42" size="1.778" layer="95"/>
+<pinref part="MDL1" gate="G$1" pin="GPIO0"/>
+<wire x1="-17.78" y1="48.26" x2="-15.24" y2="48.26" width="0.1524" layer="91"/>
+<label x="-15.24" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -5038,18 +5063,47 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <wire x1="134.62" y1="91.44" x2="137.16" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="R5" gate="G$1" pin="2"/>
-<pinref part="U$1" gate="G$1" pin="REST"/>
-<wire x1="27.94" y1="68.58" x2="30.48" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="GPIO4" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO4"/>
-<wire x1="60.96" y1="63.5" x2="63.5" y2="63.5" width="0.1524" layer="91"/>
-<label x="63.5" y="63.5" size="1.778" layer="95"/>
+<pinref part="MDL1" gate="G$1" pin="GPIO4"/>
+<wire x1="-17.78" y1="50.8" x2="-15.24" y2="50.8" width="0.1524" layer="91"/>
+<label x="-15.24" y="50.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="167.64" y1="60.96" x2="177.8" y2="60.96" width="0.1524" layer="91"/>
+<label x="170.18" y="60.96" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="RXD" class="0">
+<segment>
+<pinref part="JP2" gate="A" pin="2"/>
+<wire x1="76.2" y1="101.6" x2="83.82" y2="101.6" width="0.1524" layer="91"/>
+<label x="83.82" y="101.6" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MDL1" gate="G$1" pin="RXD"/>
+<wire x1="-17.78" y1="55.88" x2="-15.24" y2="55.88" width="0.1524" layer="91"/>
+<label x="-15.24" y="55.88" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="TXD" class="0">
+<segment>
+<pinref part="JP2" gate="A" pin="3"/>
+<wire x1="76.2" y1="104.14" x2="83.82" y2="104.14" width="0.1524" layer="91"/>
+<label x="83.82" y="104.14" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MDL1" gate="G$1" pin="TXD"/>
+<wire x1="-17.78" y1="58.42" x2="-15.24" y2="58.42" width="0.1524" layer="91"/>
+<label x="-15.24" y="58.42" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GPIO5" class="0">
+<segment>
+<pinref part="MDL1" gate="G$1" pin="GPIO5"/>
+<wire x1="-17.78" y1="53.34" x2="-15.24" y2="53.34" width="0.1524" layer="91"/>
+<label x="-15.24" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
@@ -5057,56 +5111,7 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <label x="134.62" y="63.5" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
-<net name="RXD" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="RXD"/>
-<wire x1="60.96" y1="66.04" x2="63.5" y2="66.04" width="0.1524" layer="91"/>
-<label x="63.5" y="66.04" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="JP2" gate="A" pin="2"/>
-<wire x1="76.2" y1="101.6" x2="83.82" y2="101.6" width="0.1524" layer="91"/>
-<label x="83.82" y="101.6" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="TXD" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="TXD"/>
-<wire x1="60.96" y1="68.58" x2="63.5" y2="68.58" width="0.1524" layer="91"/>
-<label x="63.5" y="68.58" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="JP2" gate="A" pin="3"/>
-<wire x1="76.2" y1="104.14" x2="83.82" y2="104.14" width="0.1524" layer="91"/>
-<label x="83.82" y="104.14" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="GPIO5" class="0">
-<segment>
-<pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="167.64" y1="60.96" x2="177.8" y2="60.96" width="0.1524" layer="91"/>
-<label x="170.18" y="60.96" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U$1" gate="G$1" pin="GPIO5"/>
-<wire x1="60.96" y1="60.96" x2="63.5" y2="60.96" width="0.1524" layer="91"/>
-<label x="63.5" y="60.96" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="LOAD2" class="1">
-<segment>
-<pinref part="K2" gate="A" pin="DS1"/>
-<wire x1="157.48" y1="27.94" x2="157.48" y2="17.78" width="0.1524" layer="91"/>
-<label x="157.48" y="20.32" size="1.778" layer="95" rot="R90"/>
-<pinref part="CONN-SW" gate="-3" pin="KL"/>
-</segment>
-</net>
 <net name="GPIO16" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="GPIO16"/>
-<wire x1="30.48" y1="60.96" x2="27.94" y2="60.96" width="0.1524" layer="91"/>
-<label x="25.4" y="60.96" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="0" y1="96.52" x2="0" y2="91.44" width="0.1524" layer="91"/>
@@ -5116,13 +5121,13 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <junction x="0" y="91.44"/>
 <label x="12.7" y="91.44" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="MDL1" gate="G$1" pin="GPIO16"/>
+<wire x1="-50.8" y1="50.8" x2="-76.2" y2="50.8" width="0.1524" layer="91"/>
+<label x="-76.2" y="50.8" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GPIO14" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="GPIO14"/>
-<wire x1="30.48" y1="58.42" x2="27.94" y2="58.42" width="0.1524" layer="91"/>
-<label x="25.4" y="58.42" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="0" y1="81.28" x2="0" y2="86.36" width="0.1524" layer="91"/>
@@ -5132,18 +5137,10 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <junction x="0" y="86.36"/>
 <label x="12.7" y="86.36" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="AC-SW-L" class="1">
 <segment>
-<pinref part="K1" gate="A" pin="DS2"/>
-<wire x1="109.22" y1="27.94" x2="109.22" y2="17.78" width="0.1524" layer="91"/>
-<label x="109.22" y="20.32" size="1.778" layer="95" rot="R90"/>
-<pinref part="CONN-SW" gate="-1" pin="KL"/>
-</segment>
-<segment>
-<pinref part="K2" gate="A" pin="DS2"/>
-<wire x1="152.4" y1="27.94" x2="152.4" y2="20.32" width="0.1524" layer="91"/>
-<label x="152.4" y="20.32" size="1.778" layer="95" rot="R90"/>
+<pinref part="MDL1" gate="G$1" pin="GPIO14"/>
+<wire x1="-50.8" y1="48.26" x2="-76.2" y2="48.26" width="0.1524" layer="91"/>
+<label x="-76.2" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -5179,18 +5176,61 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <wire x1="114.3" y1="63.5" x2="116.84" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="N$2" class="1">
 <segment>
 <pinref part="AC-IN" gate="-1" pin="KL"/>
 <pinref part="U$4" gate="G$1" pin="AC1"/>
 <wire x1="20.32" y1="30.48" x2="30.48" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="N$5" class="1">
 <segment>
 <pinref part="AC-IN" gate="-2" pin="KL"/>
 <pinref part="U$4" gate="G$1" pin="AC2"/>
 <wire x1="20.32" y1="25.4" x2="30.48" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="MDL1" gate="G$1" pin="REST"/>
+<wire x1="-50.8" y1="58.42" x2="-53.34" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="MDL1" gate="G$1" pin="CH_PD"/>
+<wire x1="-50.8" y1="53.34" x2="-53.34" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="LOADN" class="1">
+<segment>
+<pinref part="CONN-SW" gate="-3" pin="KL"/>
+<pinref part="K1" gate="A" pin="DS2"/>
+<wire x1="109.22" y1="17.78" x2="109.22" y2="27.94" width="0.1524" layer="91"/>
+<label x="109.22" y="17.78" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="K2" gate="A" pin="DS2"/>
+<wire x1="152.4" y1="27.94" x2="152.4" y2="17.78" width="0.1524" layer="91"/>
+<label x="152.4" y="17.78" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="LOAD1L" class="1">
+<segment>
+<pinref part="CONN-SW" gate="-1" pin="KL"/>
+<pinref part="K1" gate="A" pin="DS1"/>
+<wire x1="114.3" y1="17.78" x2="114.3" y2="27.94" width="0.1524" layer="91"/>
+<label x="114.3" y="17.78" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="LOAD2L" class="1">
+<segment>
+<pinref part="CONN-SW" gate="-2" pin="KL"/>
+<pinref part="K2" gate="A" pin="DS1"/>
+<wire x1="157.48" y1="17.78" x2="157.48" y2="27.94" width="0.1524" layer="91"/>
+<label x="157.48" y="17.78" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 </nets>
