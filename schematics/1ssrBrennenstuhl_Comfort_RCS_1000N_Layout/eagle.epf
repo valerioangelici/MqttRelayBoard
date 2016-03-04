@@ -370,7 +370,7 @@ UsedLibrary="/home/nexse/programmi/eagle-7.5.0/lbr/SparkFun-Eagle-Libraries/User
 
 [Win_1]
 Type="Control Panel"
-Loc="165 51 764 450"
+Loc="165 51 1031 459"
 State=2
 Number=0
 

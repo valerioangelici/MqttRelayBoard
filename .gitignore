@@ -1,6 +1,12 @@
 # My secrets file
 mysecrets.h
 
+#eagle files
+*.pro
+*.job
+*.b#*
+*.s#*
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
