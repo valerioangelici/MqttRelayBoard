@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -155,10 +155,10 @@
 <text x="44" y="45.75" size="1.778" layer="112" rot="SR270">socketHAB</text>
 <text x="40.75" y="45.75" size="1.143" layer="112" rot="SR270">Valerio Angelici
 v 1.0</text>
-<text x="6.25" y="8" size="1.016" layer="122" distance="56" rot="MR180">https://github.com/valerioangelici/socketHAB</text>
+<text x="4.98" y="44.83" size="1.016" layer="122" distance="56" rot="MR180">https://github.com/valerioangelici/socketHAB</text>
 <text x="40.75" y="30.5" size="1.143" layer="122" rot="SMR90">Valerio Angelici
 v 1.0</text>
-<text x="23.25" y="9.75" size="1.016" layer="122" rot="SMR0">Fits a Brennstuhl 
+<text x="19.44" y="37.69" size="1.016" layer="122" rot="SMR0">Fits a Brennstuhl 
 Comfort RCS 1000N</text>
 <wire x1="44.483065625" y1="29.02995" x2="42.183034375" y2="29.02995" width="0.4064" layer="112"/>
 <wire x1="42.183034375" y1="29.02995" x2="38.6028625" y2="27.54699375" width="0.4064" layer="112" curve="45"/>
@@ -1812,7 +1812,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <element name="C2" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uF" x="6.5" y="13" rot="MR270">
 <attribute name="PROD_ID" value="CAP-08604" x="6.5" y="13" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
-<element name="D1" library="SparkFun-DiscreteSemi" package="SMA-DIODE" value="" x="38.29" y="35.35" rot="MR180"/>
 <element name="K1" library="relay" package="AQG" value="AQG12105" x="35.91" y="19.8" rot="R270">
 <attribute name="MF" value="AROMAT/ MATSUSHITA" x="35.91" y="19.8" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_NEWARK" value="20J4759" x="35.91" y="19.8" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1855,6 +1854,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="VALUE" x="24.54" y="36.385" size="1.27" layer="28" rot="MR270"/>
 </element>
 <element name="J1" library="SparkFun-Connectors" package="1X02_LONGPADS" value="" x="3" y="40.75" rot="R90"/>
+<element name="D3" library="SparkFun-DiscreteSemi" package="SMA-DIODE" value="" x="19.05" y="25.4" rot="MR180"/>
 </elements>
 <signals>
 <signal name="3V3">
@@ -1942,30 +1942,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <contactref element="U$4" pad="+VO"/>
 <contactref element="U2" pad="3"/>
 <contactref element="C1" pad="1"/>
-<contactref element="K1" pad="+"/>
-<contactref element="D1" pad="C"/>
-<contactref element="R4" pad="2"/>
-<wire x1="32.5" y1="27.15" x2="35.376975" y2="27.15" width="0.4064" layer="16"/>
-<wire x1="35.376975" y1="27.15" x2="35.8259875" y2="27.3359875" width="0.4064" layer="16" curve="45"/>
-<wire x1="35.8259875" y1="27.3359875" x2="35.91" y2="27.42" width="0.4064" layer="16"/>
-<wire x1="40.44" y1="35.35" x2="40.44" y2="33.703025" width="0.4064" layer="16"/>
-<wire x1="40.44" y1="33.703025" x2="40.2540125" y2="33.2540125" width="0.4064" layer="16" curve="-45"/>
-<wire x1="40.2540125" y1="33.2540125" x2="38.25" y2="31.25" width="0.4064" layer="16"/>
-<wire x1="38.25" y1="31.25" x2="38.25" y2="30.023025" width="0.4064" layer="16"/>
-<wire x1="38.25" y1="30.023025" x2="38.0640125" y2="29.5740125" width="0.4064" layer="16" curve="-45"/>
-<wire x1="38.0640125" y1="29.5740125" x2="35.91" y2="27.42" width="0.4064" layer="16"/>
 <wire x1="2.34" y1="22.5" x2="6.736975" y2="22.5" width="0.4064" layer="16"/>
 <wire x1="6.736975" y1="22.5" x2="7.1859875" y2="22.3140125" width="0.4064" layer="16" curve="-45"/>
 <wire x1="7.1859875" y1="22.3140125" x2="8.25" y2="21.25" width="0.4064" layer="16"/>
 <wire x1="8.25" y1="21.25" x2="12.75296875" y2="21.25" width="0.4064" layer="16"/>
 <wire x1="12.75296875" y1="21.25" x2="12.9012" y2="21.3114" width="0.4064" layer="16" curve="45"/>
-<wire x1="12.9012" y1="21.3114" x2="12.9012" y2="23.638175" width="0.4064" layer="16"/>
-<wire x1="12.9012" y1="23.638175" x2="13.0871875" y2="24.0871875" width="0.4064" layer="16" curve="-45"/>
-<wire x1="13.0871875" y1="24.0871875" x2="14.25" y2="25.25" width="0.4064" layer="16"/>
-<wire x1="14.25" y1="25.25" x2="30.336975" y2="25.25" width="0.4064" layer="16"/>
-<wire x1="30.336975" y1="25.25" x2="30.7859875" y2="25.4359875" width="0.4064" layer="16" curve="45"/>
-<wire x1="30.7859875" y1="25.4359875" x2="32.5" y2="27.15" width="0.4064" layer="16"/>
 <wire x1="2.34" y1="22.5" x2="2.29" y2="13.11" width="0.4064" layer="16"/>
+<contactref element="D3" pad="A"/>
+<wire x1="12.9012" y1="21.3114" x2="16.9898" y2="25.4" width="0.4064" layer="16"/>
+<wire x1="16.9898" y1="25.4" x2="16.9" y2="25.4" width="0.4064" layer="16"/>
 </signal>
 <signal name="GPIO0">
 <contactref element="MDL1" pad="12"/>
@@ -2000,16 +1985,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </signal>
 <signal name="N$10">
 <contactref element="K1" pad="-"/>
-<contactref element="D1" pad="A"/>
 <contactref element="Q1" pad="3"/>
 <contactref element="D2" pad="C"/>
-<wire x1="35.91" y1="29.96" x2="36.14" y2="35.35" width="0.4064" layer="16"/>
-<wire x1="36.62" y1="38.75" x2="36.3259875" y2="38.4559875" width="0.4064" layer="16"/>
-<wire x1="36.3259875" y1="38.4559875" x2="36.14" y2="38.006975" width="0.4064" layer="16" curve="45"/>
-<wire x1="36.14" y1="38.006975" x2="36.14" y2="35.35" width="0.4064" layer="16"/>
-<wire x1="32.5" y1="32.877" x2="34.7870125" y2="35.1640125" width="0.4064" layer="16"/>
-<wire x1="34.7870125" y1="35.1640125" x2="35.236025" y2="35.35" width="0.4064" layer="16" curve="-45"/>
-<wire x1="35.236025" y1="35.35" x2="36.14" y2="35.35" width="0.4064" layer="16"/>
+<wire x1="32.5" y1="32.877" x2="32.993" y2="32.877" width="0.4064" layer="16"/>
+<wire x1="32.993" y1="32.877" x2="35.91" y2="29.96" width="0.4064" layer="16"/>
+<wire x1="36.62" y1="38.75" x2="32.5" y2="34.63" width="0.4064" layer="16"/>
+<wire x1="32.5" y1="34.63" x2="32.5" y2="32.877" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$12">
 <contactref element="Q1" pad="1"/>
@@ -2077,6 +2058,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="20.6859875" y1="40.8140125" x2="22" y2="39.5" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$2">
+</signal>
+<signal name="N$3">
+<contactref element="K1" pad="+"/>
+<contactref element="R4" pad="2"/>
+<wire x1="32.5" y1="27.15" x2="35.91" y2="27.15" width="0.4064" layer="16"/>
+<wire x1="35.91" y1="27.15" x2="35.91" y2="27.42" width="0.4064" layer="16"/>
+<contactref element="D3" pad="C"/>
+<wire x1="32.5" y1="27.15" x2="30.75" y2="25.4" width="0.4064" layer="16" curve="-90"/>
+<wire x1="30.75" y1="25.4" x2="21.2" y2="25.4" width="0.4064" layer="16"/>
 </signal>
 </signals>
 </board>
