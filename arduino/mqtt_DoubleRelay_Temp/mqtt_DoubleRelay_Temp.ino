@@ -74,6 +74,8 @@ void setup_wifi() {
   Serial.println();
   Serial.print("Connecting to ");
   Serial.println(wifi_ssid);
+  WiFi.setPhyMode(WIFI_PHY_MODE_11G);
+  WiFi.mode(WIFI_STA);
 
   WiFi.begin(wifi_ssid, wifi_password);
   WiFi.config(ip, gateway, subnet, dns);
