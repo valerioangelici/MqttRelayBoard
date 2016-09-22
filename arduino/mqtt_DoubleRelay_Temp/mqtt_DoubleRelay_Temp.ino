@@ -196,23 +196,54 @@ void verifyAndSendTemp() {
 }
 
 void checkSwitches() {
-  //read and process switch 1
-  int switch1Reading = digitalRead(SWITCH_1_PIN);
+  // //read and process switch 1
+  // int switch1Reading = digitalRead(SWITCH_1_PIN);
+  //   if(switch1Reading == LOW && switch1LastReading == HIGH && millis() - lastSwitchTime > switchDebounce){
+  //     //testing the button again in 50 msec to try to avoid noise
+  //     delay(50);
+  //     switch1Reading = digitalRead(SWITCH_1_PIN);
+  //     if(switch1Reading == LOW){
+  //       Serial.println("Switching relay1 by connected switch");
+  //       if(relay1Status == 1){
+  //         switchRelay(RELAY_1_PIN, LOW);
+  //       } else {
+  //         switchRelay(RELAY_1_PIN, HIGH);
+  //       }
+  //       lastSwitchTime = millis();
+  //     } 
+  //   }
+    
+    //Using long press on switch 1 to activate relay 2
+    int switch1Reading = digitalRead(SWITCH_1_PIN);
     if(switch1Reading == LOW && switch1LastReading == HIGH && millis() - lastSwitchTime > switchDebounce){
-      //testing the button again in 50 msec to try to avoid noise
-      delay(50);
-      switch1Reading = digitalRead(SWITCH_1_PIN);
-      if(switch1Reading == LOW){
-        Serial.println("Switching relay1 by connected switch");
-        if(relay1Status == 1){
-          switchRelay(RELAY_1_PIN, LOW);
-        } else {
-          switchRelay(RELAY_1_PIN, HIGH);
+      long startMillis = millis();
+      while(millis() - startMillis < 5000 && switch1Reading == LOW){
+        client.loop(); //client loop as this loop could be long
+        //testing the button again in 50 msec to try to avoid noise
+        delay(50);
+        switch1Reading = digitalRead(SWITCH_1_PIN);
+        if(switch1Reading == HIGH && millis() - startMillis < LONG_PRESS_MILLIS) {
+          Serial.println("Switching relay1 by connected switch");
+          if(relay1Status == 1) {
+            switchRelay(RELAY_1_PIN, LOW);
+          } else {
+            switchRelay(RELAY_1_PIN, HIGH);
+          }
+          lastSwitchTime = millis();
+          break;
+        } else if (switch1Reading == LOW && millis() - startMillis > LONG_PRESS_MILLIS){
+          Serial.println("Switching relay1 by long press on connected switch");
+          if(relay2Status == 1){
+            switchRelay(RELAY_2_PIN, LOW);
+          } else {
+            switchRelay(RELAY_2_PIN, HIGH);
+          }
+          lastSwitchTime = millis();
+          break;
         }
-        lastSwitchTime = millis();
-      } 
+      }
     }
-  switch1LastReading = switch1Reading;
+    switch1LastReading = switch1Reading;
 
   //read and process switch 2
   int switch2Reading = digitalRead(SWITCH_2_PIN);

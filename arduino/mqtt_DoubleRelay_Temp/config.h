@@ -27,6 +27,7 @@ int tempDiffToSendUpdate = 1; //this is in tenths of C (1 = 0.1C)
 unsigned long tickInterval = 15000; // in millis
 unsigned long ticksToForceTempUpdate = 900; // in ticks
 unsigned long forceRelayStatusUpdateTicks = 900; // in ticks
+unsigned long LONG_PRESS_MILLIS = 2000;
 
 //EEPROM config is not used actually
 // #define EEPROM_SWITCH          0
