@@ -4,11 +4,8 @@
 
 /*
 	MQTT Topics:
-	temperature_topic: the topic to send the temperature updates
 	relay_1_command_topic: the topic to subscribe to get the relay 1 commands
 	rele1_status_topic: the topic where the relay 1 status updates must be published
-	rele2_command_topic: the topic to subscribe to get the relay 2 commands
-	rele2_status_topic: the topic where the relay 2 status updates must be published
 */
 #define relay_1_command_topic "/home/sockethab/s01/rele1/command"
 #define relay_1_status_topic "/home/sockethab/s01/rele1/status"

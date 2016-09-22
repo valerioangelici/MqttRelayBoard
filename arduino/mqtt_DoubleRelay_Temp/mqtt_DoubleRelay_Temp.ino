@@ -9,12 +9,12 @@
   sento to a mqtt topic so that openhab is updated even
   when the relay is switched with the physical buttons
 
-*/
+  */
 
-#include <ESP8266WiFi.h>
-#include <OneWire.h>
-#include <PubSubClient.h>
-#include <DallasTemperature.h>
+  #include <ESP8266WiFi.h>
+  #include <OneWire.h>
+  #include <PubSubClient.h>
+  #include <DallasTemperature.h>
 //#include <EEPROM.h>
 #include "mysecrets.h"
 #include "config.h"
@@ -100,18 +100,18 @@ void reconnect() {
     // Attempt to connect
     // If you do not want to use a username and password, change next line to
     // if (client.connect("ESP8266Client")) {
-    if (client.connect(mqtt_client_id, mqtt_user, mqtt_password)) {
-      Serial.println("connected");
+      if (client.connect(mqtt_client_id, mqtt_user, mqtt_password)) {
+        Serial.println("connected");
       // Once connected, publish an announcement...
       client.publish("helloTopic", "hello world");
       // ... and resubscribe
       client.subscribe(relay_1_command_topic);
       client.loop();
       client.subscribe(relay_2_command_topic);
-    } else {
-      Serial.print("failed, rc=");
-      Serial.print(client.state());
-      Serial.println(" try again in 1 second");
+      } else {
+        Serial.print("failed, rc=");
+        Serial.print(client.state());
+        Serial.println(" try again in 1 second");
       // Wait 1 second before retrying
       delay(1000);
     }
@@ -138,7 +138,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
     } else if(payload[0] == '1') {
       switchRelay(RELAY_1_PIN, HIGH);
     }
-  }
+  } 
   if (strcmp(topic,relay_2_command_topic)==0) {
     if (payload[0] == '0'){
       switchRelay(RELAY_2_PIN, LOW);
@@ -149,8 +149,8 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
 }
 
-void loop() {
-  long loopStartMillis = millis();
+    void loop() {
+      long loopStartMillis = millis();
 
   //firstly check for millis overflow (every about 50 days)  
   if(lastTickTime > millis()){
@@ -212,7 +212,7 @@ void checkSwitches() {
   //       lastSwitchTime = millis();
   //     } 
   //   }
-    
+
     //Using long press on switch 1 to activate relay 2
     int switch1Reading = digitalRead(SWITCH_1_PIN);
     if(switch1Reading == LOW && switch1LastReading == HIGH && millis() - lastSwitchTime > switchDebounce){
@@ -243,11 +243,11 @@ void checkSwitches() {
         }
       }
     }
-    switch1LastReading = switch1Reading;
+      switch1LastReading = switch1Reading;
 
   //read and process switch 2
   int switch2Reading = digitalRead(SWITCH_2_PIN);
-    if(switch2Reading == LOW && switch2LastReading == HIGH && millis() - lastSwitchTime > switchDebounce){
+  if(switch2Reading == LOW && switch2LastReading == HIGH && millis() - lastSwitchTime > switchDebounce){
       //testing the button again in 50 msec to try to avoid noise
       delay(50);
       switch2Reading = digitalRead(SWITCH_1_PIN);
@@ -255,17 +255,17 @@ void checkSwitches() {
         Serial.println("Switching relay2 by connected switch");
         if(relay2Status == 1){
           switchRelay(RELAY_2_PIN, LOW);
-        } else {
-          switchRelay(RELAY_2_PIN, HIGH);
-        }
-        lastSwitchTime = millis();
-      } 
+          } else {
+            switchRelay(RELAY_2_PIN, HIGH);
+          }
+          lastSwitchTime = millis();
+        } 
+      }
+      switch2LastReading = switch2Reading;
     }
-  switch2LastReading = switch2Reading;
-}
 
-void switchRelay(int relayPin, int status){
-  ardprintf("switchRelay() start relayPin: %d status %d", relayPin, status);
+    void switchRelay(int relayPin, int status){
+      ardprintf("switchRelay() start relayPin: %d status %d", relayPin, status);
   //check that pin is valid
   if(relayPin == RELAY_1_PIN || relayPin == RELAY_2_PIN){
     //check that status is valid
