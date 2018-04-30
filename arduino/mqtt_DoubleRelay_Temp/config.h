@@ -11,10 +11,10 @@
 	rele2_status_topic: the topic where the relay 2 status updates must be published
 */
 #define temperature_topic "/home/cuci/rb01/temp"
-#define relay_1_command_topic "/home/cuci/rb01/rele1/command"
-#define relay_1_status_topic "/home/cuci/rb01/rele1/status"
-#define relay_2_command_topic "/home/cuci/rb01/rele2/command"
-#define relay_2_status_topic "/home/cuci/rb01/rele2/status"
+#define relay_1_command_topic "/openHAB/out/CuciRb01Rele1/command"
+#define relay_1_status_topic "/openHAB/in/CuciRb01Rele1/state"
+#define relay_2_command_topic "/openHAB/out/CuciRb01Rele2/command"
+#define relay_2_status_topic "/openHAB/in/CuciRb01Rele2/state"
 
 //led pin is 13
 #define RELAY_1_PIN 4
